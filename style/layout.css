@@ -15,7 +15,6 @@ a {
 }
 
 /* шапка */
-
 .header {
   width: 100%;
   height: 8vw;
@@ -27,8 +26,8 @@ a {
 
 .header > a:first-child {
   display: block;
-  height: 100%;           
-  }
+  height: 100%;
+}
 
 .text {
   display: grid;
@@ -37,21 +36,31 @@ a {
   align-items: center;
   gap: 8vw;
 }
-  
+
+/* обычная кнопка */
 a {
   font-family: "font-comfortaa";
   text-decoration: none;
   color: black;
   font-size: 1.5vw;
-  text-align: center;             
-  padding: 0.5vw 1.5vw;           
-  border: 0.3vw solid black;      
-  border-radius: 2vw;             
-  transition: 0.3s;              
+  text-align: center;
+  padding: 0.5vw 1.5vw;
+  border: 0.3vw solid black;
+  border-radius: 2vw;
+  transition: all 0.3s ease;
+  display: inline-block;
+  background: white;
 }
 
-/* красные кнопки */
+/* красные рамки */
 a.red {
+  border-color: #b5231e;
+}
+
+/* эффект при наведении */
+a:hover {
+  background: #b5231e;
+  color: white;
   border-color: #b5231e;
 }
 
@@ -62,7 +71,7 @@ h1 {
   color: #b5231e;
   font-size: 10vw;
   text-align: center;
-  padding: 10vw 1.5vw; 
+  padding: 10vw 1.5vw;
 }
 
 .main_banner {
@@ -73,7 +82,7 @@ h1 {
 
 .pattern {
   position: absolute;
-  top: -3vw; 
+  top: -3vw;
   left: 40%;
   transform: translateX(-50%);
   width: 25vw;
@@ -147,4 +156,436 @@ h1 {
   right: -8vw;
   width: 38vw;
   transform: rotate(3deg);
+}
+
+/* второй блок */
+.block_two {
+  position: relative;
+  text-align: center;
+  margin-top: 20vw;
+}
+
+.block_two h2 {
+  font-family: "font-chelsea";
+  font-size: 8vw;
+  color: white;
+  -webkit-text-stroke: 0.15vw black;
+  margin-bottom: 4vw;
+}
+
+.works_wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 10vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.work {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.work img {
+  width: 14vw;
+  height: auto;
+  border: 0.3vw solid black;
+}
+
+/* кнопки */
+.btn {
+  display: inline-block;
+  margin-top: 1vw;
+  padding: 0.5vw 1.5vw;
+  font-family: "font-comfortaa";
+  font-size: 1.2vw;
+  border: 0.3vw solid black;
+  border-radius: 2vw;
+  background: white;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn.red {
+  border-color: #b5231e;
+}
+
+.btn:hover {
+  background: #b5231e;
+  color: white;
+  border-color: #b5231e;
+}
+
+/* декоративные элементы */
+.blob {
+  position: absolute;
+  left: 0;
+  bottom: -35vw;
+  width: 30vw;
+  z-index: 0;
+}
+
+.flower {
+  position: absolute;
+  right: 0;
+  bottom: -25vw;
+  width: 20vw;
+  z-index: 0;
+}
+
+/* третий блок */
+.block_three {
+  text-align: center;
+  margin-top: 20vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.block_three h2 {
+  font-family: "font-chelsea";
+  font-size: 8vw;
+  color: white;
+  -webkit-text-stroke: 0.15vw black;
+  margin-bottom: 4vw;
+}
+
+/* обёртка */
+.products_scroller {
+  width: 100%;
+  height: 32vw;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
+}
+
+/* бегущая строка */
+.products_wrapper {
+  display: flex;
+  gap: 5vw;
+  align-items: flex-end;
+  width: max-content;
+  animation: scrollProducts 25s linear infinite;
+}
+
+/* остановка анимации при наведении */
+.products_scroller:hover .products_wrapper {
+  animation-play-state: paused;
+}
+
+/* товары */
+.product {
+  width: 25vw;
+  height: auto;
+  flex-shrink: 0;
+  transition: transform 0.4s ease;
+}
+
+/* увеличение при наведении на товар */
+.product:hover {
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+/* кнопка */
+.btn.big {
+  font-size: 2vw;
+  padding: 1vw 1vw;
+  margin-top: 6vw;
+  margin-bottom: 6vw;
+}
+
+/* имя и группа */
+.footer_info {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 3vw;
+}
+
+.footer_info .name,
+.footer_info .group {
+  font-family: "font-chelsea";
+  font-size: 2vw;
+  color: white;
+  -webkit-text-stroke: 0.1vw black;
+}
+
+/* анимация движения влево */
+@keyframes scrollProducts {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* страничка ошибка */
+
+.error_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0vw 5vw;
+  background-color: white;
+  color: black;
+}
+
+.error_text {
+  flex: 1;
+  text-align: center;
+  padding: 0 0vw;
+}
+
+.error_text h1 {
+  font-family: "font-chelsea";
+  font-size: 6vw;
+  color: white;
+  -webkit-text-stroke: 0.2vw black;
+  margin: 0 0 1vw 0;
+}
+
+.error_text p {
+  font-family: "font-comfortaa";
+  font-size: 3vw;
+  line-height: 1.4;
+}
+
+/* изображения по бокам */
+.error_img {
+  width: 15vw;
+  height: auto;
+}
+
+/* шапка страничка ошибка */
+
+.header {
+  width: 100%;
+  height: 8vw;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 100%;
+  align-items: center;
+}
+
+.text {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: center;
+  align-items: center;
+  gap: 8vw;
+}
+
+.text a {
+  font-family: "font-comfortaa";
+  text-decoration: none;
+  color: black;
+  font-size: 1.5vw;
+  text-align: center;
+  padding: 0.5vw 1.5vw;
+  border: 0.3vw solid black;
+  border-radius: 2vw;
+  transition: all 0.3s ease;
+}
+
+.text a.red {
+  border-color: #b5231e;
+}
+
+.text a:hover {
+  background: #b5231e;
+  color: white;
+  border-color: #b5231e;
+}
+
+/* плавное появление */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* лёгкое покачивание */
+.swing {
+  animation: swing 2s ease-in-out infinite;
+}
+
+@keyframes swing {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+/* плавный подъём вверх */
+.slide-up {
+  opacity: 0;
+  transform: translateY(2vw);
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* появление index */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* плавное появление снизу */
+.slide-up {
+  opacity: 0;
+  transform: translateY(2vw);
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* лёгкое покачивание */
+.swing {
+  animation: swing 3s ease-in-out infinite;
+}
+
+@keyframes swing {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+/* пульсирующая обводка */
+.pulse-stroke {
+  animation: pulseStroke 2s ease-in-out infinite;
+}
+
+@keyframes pulseStroke {
+  0%, 100% {
+    -webkit-text-stroke: 0.02vw rgb(109, 11, 11);
+  }
+  50% {
+    -webkit-text-stroke: 0.01vw rgb(108, 8, 8);
+  }
+}
+
+/* плавный зум */
+.zoom-in {
+  transform: scale(0.9);
+  animation: zoomIn 0.8s ease-out forwards;
+}
+
+@keyframes zoomIn {
+  to {
+    transform: scale(1);
+  }
+}
+
+.section_title {
+  font-family: "font-chelsea";
+  font-size: 4vw;
+  text-align: center;
+  color: white;
+  -webkit-text-stroke: 0.3vw black;
+  margin: 4vw 0 3vw;
+}
+
+/* страничка merch */
+.products_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 4vw;
+  padding: 0 5vw 5vw;
+  align-items: start;
+  justify-items: center;
+}
+
+/* карточка товара */
+.product_card {
+  text-align: center;
+  font-family: "font-comfortaa";
+  animation: fadeIn 1.2s ease-out forwards;
+  opacity: 0;
+}
+
+.product_card img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+}
+
+.product_card p {
+  margin: 1vw 0 0.5vw;
+  font-size: 1.2vw;
+}
+
+.product_card strong {
+  display: block;
+  margin-bottom: 1vw;
+  font-size: 1.5vw;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.7vw 2vw;
+  border: 0.2vw solid black;
+  border-radius: 3vw;
+  font-size: 1vw;
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #b5231e;
+  color: white;
+  border-color: #b5231e;
+}
+
+/* анимации */
+.fade-in {
+  animation: fadeIn 1.2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.pulse-stroke {
+  animation: pulseStroke 2s ease-in-out infinite;
+}
+
+@keyframes pulseStroke {
+  0%, 100% {
+    -webkit-text-stroke: 0.2vw black;
+  }
+  50% {
+    -webkit-text-stroke: 0.3vw black;
+  }
 }
