@@ -249,51 +249,79 @@ h1 {
   font-size: 8vw;
   color: white;
   -webkit-text-stroke: 0.15vw black;
-  margin-bottom: 4vw;
+  margin-bottom: 10vw;
 }
 
-/* обёртка */
+/* обертка бегущей строки */
 .products_scroller {
   width: 100%;
-  height: 32vw;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  height: 18vw;
+  overflow: hidden;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* бегущая строка */
+/* сама строка */
 .products_wrapper {
   display: flex;
-  gap: 5vw;
-  align-items: flex-end;
-  width: max-content;
-  animation: scrollProducts 25s linear infinite;
+  gap: 4vw;
+  align-items: center;
+  animation: scrollProducts 30s linear infinite;
 }
 
-/* остановка анимации при наведении */
+/* при наведении остановка */
 .products_scroller:hover .products_wrapper {
   animation-play-state: paused;
 }
 
-/* товары */
+/* каждый товар */
 .product {
-  width: 25vw;
-  height: auto;
   flex-shrink: 0;
-  transition: transform 0.4s ease;
+  width: 17vw;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
 }
 
-/* увеличение при наведении на товар */
-.product:hover {
-  transform: scale(1.2);
-  z-index: 1;
+/* внутренний блок для масштабирования */
+.product_inner {
+  transition: transform 0.4s ease;
+  display: inline-block;
 }
+
+/* ховер-анимация */
+.product:hover .product_inner {
+  transform: scale(1.1);
+  z-index: 10;
+}
+
+/* картинка товара */
+.product img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ключевая анимация прокрутки */
+@keyframes scrollProducts {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 
 /* кнопка */
 .btn.big {
   font-size: 2vw;
   padding: 1vw 1vw;
-  margin-top: 6vw;
+  margin-top: 10vw;
   margin-bottom: 6vw;
 }
 
@@ -542,12 +570,14 @@ h1 {
 .product_card p {
   margin: 1vw 0 0.5vw;
   font-size: 1.2vw;
+  color: black;
 }
 
 .product_card strong {
   display: block;
   margin-bottom: 1vw;
   font-size: 1.5vw;
+  color: black;
 }
 
 .btn {
