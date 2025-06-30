@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style/style.css" />
-    <meta charset="UTF-8" />
-    <meta
-      property="og:description"
-      content="регистрация дотдог"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOT.DOG — Запись</title>
+  <link rel="stylesheet" href="style/style.css" />
+</head>
 
-    <title>DOT.DOG REG</title>
-  
+<body>
+
+  <!-- шапка -->
+  <div class="header fade-in">
+    <div class="text">
+      <a href="merch.html">магазин</a>
+      <a href="book.html" class="red">книга</a>
+      <a href="index.html">главная</a>
+      <a href="error.html" class="red">корзина</a>
+    </div>
+  </div>
+
+  <!-- секция регистрации -->
+  <div class="reg_wrapper fade-in">
+    <h2 class="section_title fade-in">ЗАПИСЬ</h2>
+
+    <form class="reg_form" onsubmit="event.preventDefault(); showAlert();">
+      <input type="text" placeholder="ВАШЕ ИМЯ" required />
+      <input type="text" placeholder="ВАША ФАМИЛИЯ" required />
+      <input type="email" placeholder="ВАША ПОЧТА" required />
+      <button type="submit">ЗАРЕГЕСТРИРОВАТЬСЯ</button>
+    </form>
+
+    <!-- декор -->
+    <img src="img/reg/left.svg" alt="" class="decor left" />
+    <img src="img/reg/right.svg" alt="" class="decor top-right" />
+    <img src="img/reg/bottom right.svg" alt="" class="decor bottom-right" />
+    <img src="img/reg/bottom left.svg" alt="" class="decor bottom-left" /> 
+    
+    <script src="js/js.js"></script>
+
+  </div>
+
+</body>
+</html>
