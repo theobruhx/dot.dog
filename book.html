@@ -1,27 +1,43 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style/style.css" />
-    <meta charset="UTF-8" />
-    <meta
-      property="og:description"
-      content="книга дотдог"
-    />
-
-    <title>DOT.DOG BOOK</title>
-  
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOT.DOG BOOK</title>
+  <link rel="stylesheet" href="style/style.css" />
+</head>
 <body>
 
-   <!-- шапка -->
-  <div class="header">
-  <div class="text">
-    <a href="merch.html">магазин</a>
-    <a href="index.html" class="red">главная</a>
-    <a href="event.html">мероприятия</a>
-    <a href="error.html" class="red">корзина</a>
+  <!-- шапка -->
+  <div class="header fade-in">
+    <div class="text">
+      <a href="merch.html">магазин</a>
+      <a href="index.html" class="red">главная</a>
+      <a href="event.html">мероприятия</a>
+      <a href="error.html" class="red">корзина</a>
+    </div>
   </div>
-</div>
 
+  <!-- секция книги -->
+  <div class="book_wrapper fade-in">
+    <h2 class="section_title pulse-stroke">НАША КНИГА</h2>
+    <p class="book_subtitle fade-in">Посмотрите на наш путеводитель по нашему прошлому мероприятию!</p>
+
+    <!-- книга -->
+    <div class="book_view" onclick="nextPage()">
+      <img class="book_page" src="img/book/1.svg" alt="страница 1" />
+      <img class="book_page" src="img/book/2.svg" alt="страница 2" />
+      <img class="book_page" src="img/book/3.svg" alt="страница 3" />
+      <img class="book_page" src="img/book/4.svg" alt="страница 4" />
+      <img class="book_page" src="img/book/5.svg" alt="страница 5" />
+    </div>
+    
+    <!-- декор -->
+    <img src="img/book/left img.svg" alt="" class="decor left swing" />
+    <img src="img/book/flower5.svg" alt="" class="decor right swing" />
+  </div>
+
+  <script src="js/js.js"></script>
 </body>
+</html>
+
