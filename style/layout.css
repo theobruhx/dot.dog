@@ -619,3 +619,288 @@ h1 {
     -webkit-text-stroke: 0.3vw black;
   }
 }
+
+/* страница event.html */
+.event_wrapper {
+  background-color: white;
+  padding: 2vw 5vw 8vw; /* уменьшили верхний отступ */
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+/* заголовок */
+.event_wrapper .section_title {
+  font-family: "font-chelsea";
+  font-size: 6vw;
+  color: white;
+  -webkit-text-stroke: 0.2vw black;
+  margin-bottom: 4vw;
+  margin-top: 1vw; /* добавили дополнительное приближение к верху */
+}
+
+/* изображения телефонов */
+.phone_gallery {
+  display: flex;
+  justify-content: center;
+  gap: 3vw;
+  margin-bottom: 4vw;
+  flex-wrap: wrap;
+}
+
+.phone_gallery img {
+  width: 20vw; /* увеличили размер */
+  max-width: 220px;
+  border-radius: 1vw;
+  box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1);
+}
+
+/* описание */
+.event_description {
+  max-width: 60vw;
+  margin: 0 auto 4vw;
+  font-family: "font-comfortaa";
+  font-size: 1.7vw; /* увеличили размер текста */
+  line-height: 1.8;
+  color: black;
+}
+
+/* кнопка */
+.event_btn {
+  display: inline-block;
+  font-family: "font-comfortaa";
+  font-size: 1.6vw;
+  padding: 1vw 2.5vw;
+  color: black;
+  border: 0.3vw solid #b5231e;
+  border-radius: 3vw;
+  text-decoration: none;
+  background-color: white;
+  transition: 0.3s ease;
+}
+
+.event_btn:hover {
+  background-color: #b5231e;
+  color: white;
+}
+
+/* декоративные элементы */
+.decor {
+  position: absolute;
+  z-index: 0;
+}
+
+.decor.left {
+  top: 8vw; /* немного выше */
+  left: 0;
+  width: 10vw;
+}
+
+.decor.right {
+  bottom: 5vw;
+  right: 0;
+  width: 10vw;
+}
+
+/* анимация пульсирующая для заголовка */
+.pulse-stroke {
+  animation: pulseStroke 2s ease-in-out infinite;
+}
+
+@keyframes pulseStroke {
+  0%, 100% {
+    -webkit-text-stroke: 0.15vw black;
+  }
+  50% {
+    -webkit-text-stroke: 0.3vw black;
+  }
+}
+
+/* плавное появление */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* плавный зум */
+.zoom-in {
+  transform: scale(0.9);
+  animation: zoomIn 0.8s ease-out forwards;
+}
+
+@keyframes zoomIn {
+  to {
+    transform: scale(1);
+  }
+}
+
+/* плавный подъём вверх */
+.slide-up {
+  opacity: 0;
+  transform: translateY(2vw);
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* обёртка формы */
+.reg_wrapper {
+  background-color: white;
+  padding: 5vw 5vw 8vw;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* заголовок */
+.reg_wrapper .section_title {
+  font-family: "font-chelsea";
+  font-size: 6vw;
+  color: white;
+  -webkit-text-stroke: 0.2vw black;
+  margin-bottom: 4vw;
+}
+
+/* сама форма */
+.reg_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vw;
+  max-width: 50vw;
+  margin: 0 auto;
+}
+
+/* поля ввода */
+.reg_form input {
+  font-family: "font-comfortaa";
+  font-size: 1.5vw;
+  padding: 1vw 2vw;
+  border: 0.2vw solid black;
+  border-radius: 3vw;
+  width: 100%;
+  text-align: center;
+}
+
+/* кнопка */
+.reg_form button {
+  font-family: "font-comfortaa";
+  font-size: 1.5vw;
+  padding: 1vw 3vw;
+  border: none;
+  border-radius: 3vw;
+  background-color: #b5231e;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.reg_form button:hover {
+  background-color: black;
+  color: white;
+}
+
+/* декоративные элементы */
+.decor {
+  position: absolute;
+  z-index: 0;
+}
+
+.decor.left {
+  top: 10vw;
+  left: 0;
+  width: 20vw;
+}
+
+.decor.top-right {
+  top: 3vw;
+  right: 5vw;
+  width: 15vw;
+}
+
+.decor.bottom-right {
+  bottom: 4vw;
+  right: 5vw;
+  width: 15vw;
+}
+
+.decor.bottom-left {
+  bottom: 0vw;
+  left: 5vw;
+  width: 25vw;
+}
+
+/* обёртка книги */
+.book_wrapper {
+  background-color: white;
+  padding: 5vw;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* подзаголовок */
+.book_subtitle {
+  font-family: "font-comfortaa", sans-serif;
+  font-size: 1.6vw;
+  margin: 2vw 0 4vw;
+  color: black;
+}
+
+/* блок с книгой */
+.book_view {
+  position: relative;
+  width: 60vw;
+  max-width: 600px;
+  height: 40vw;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.book_view:hover {
+  transform: scale(1.02);
+}
+
+/* страница книги */
+.book_page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 1vw;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 0;
+}
+
+.book_page.active {
+  display: block;
+  opacity: 1;
+  z-index: 1;
+}
+
+.decor.left {
+  bottom: 4vw;
+  right: -5vw;
+  width: 20vw;
+}
+
+.decor.right {
+  bottom: 1vw;
+  right: 1vw;
+  width: 15vw;
+}
+
